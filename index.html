@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>1-1 句子跟讀挑戰</title>
+<title>3-1 句子跟讀挑戰</title>
 <style>
 body { font-family: sans-serif; max-width: 600px; margin: auto; text-align: center; padding: 30px 15px; }
 #logo { width: 150px; max-width: 80%; margin-bottom: 10px; }
@@ -28,7 +28,7 @@ audio { width: 100%; max-width: 500px; margin: 0 auto; display: block; }
 </head>
 <body>
 <img id="logo" src="logo.png" alt="Logo">
-<div id="game-title">1-1 句子跟讀挑戰</div>
+<div id="game-title">3-1 句子跟讀挑戰</div>
 
 <div id="nickname-container">
   <div style="font-size:20px; font-weight:bold; margin-bottom:10px;">歡迎挑戰者到來</div>
@@ -39,7 +39,7 @@ audio { width: 100%; max-width: 500px; margin: 0 auto; display: block; }
 </div>
 
 <div id="game-container" class="hidden">
-  <div id="question-number">第 <span id="current-number">1</span> 題 / 共 12 題</div>
+  <div id="question-number">第 <span id="current-number">1</span> 題 / 共 10 題</div>
   <div id="question-selector"><strong>題目選擇：</strong></div>
   <div id="question-text" class="question-text"></div>
   <div class="practice-hint">進階練習：看著關鍵字，試著說出句子</div>
@@ -71,18 +71,16 @@ audio { width: 100%; max-width: 500px; margin: 0 auto; display: block; }
 <script src="recorder.js"></script>
 <script>
 const questions = [
-      { audio: "audio/11010101S.mp3", text: "커피가 있어요?", keywords: "커피,있다" },
-      { audio: "audio/11010102S.mp3", text: "한국 친구가 있어요.", keywords: "한국 친구,있다" },
-      { audio: "audio/11010103S.mp3", text: "물이 있어요?", keywords: "물,있다" },
-      { audio: "audio/11010104S.mp3", text: "여권이 있어요.", keywords: "여권,있다" },
-      { audio: "audio/11010105S.mp3", text: "휴지가 있어요.", keywords: "휴지,있다" },
-      { audio: "audio/11010106S.mp3", text: "우산이 없어요.", keywords: "우산,없다" },
-      { audio: "audio/11010107S.mp3", text: "빵이 없어요.", keywords: "빵,없다" },
-      { audio: "audio/11010108S.mp3", text: "시간이 없어요.", keywords: "시간,없다" },
-      { audio: "audio/11010109S.mp3", text: "담요가 있어요?", keywords: "담요,있다" },
-      { audio: "audio/11010110S.mp3", text: "화장실이 있어요?", keywords: "화장실,있다" },
-      { audio: "audio/11010111S.mp3", text: "강아지가 없어요.", keywords: "강아지,없다" },
-      { audio: "audio/11010112S.mp3", text: "우유가 없어요.", keywords: "우유,없다" }
+{ audio: "audio/11030101S.mp3", text: "콜라 주세요.", keywords: "콜라,주세요" },
+{ audio: "audio/11030102S.mp3", text: "반찬 좀 더 주세요.", keywords: "반찬,주세요" },
+{ audio: "audio/11030103S.mp3", text: "잠시만 기다리세요.", keywords: "잠시만,기다리다" },
+{ audio: "audio/11030104S.mp3", text: "담요 하나 주세요.", keywords: "담요,주세요" },
+{ audio: "audio/11030105S.mp3", text: "양말 세 켤레 주세요.", keywords: "양말,주세요" },
+{ audio: "audio/11030106S.mp3", text: "이불 하나 더 주세요.", keywords: "이불,주세요" },
+{ audio: "audio/11030107S.mp3", text: "물 네 병 더 주세요.", keywords: "물,주세요" },
+{ audio: "audio/11030108S.mp3", text: "맥주 한 병 더 주세요.", keywords: "맥주,주세요" },
+{ audio: "audio/11030109S.mp3", text: "이 옷 주세요.", keywords: "옷,주세요" },
+{ audio: "audio/11030110S.mp3", text: "이거 하나 주세요.", keywords: "이거,주세요" }
 ];
 
 let currentQuestion = 0;
@@ -91,7 +89,7 @@ let recorder, audioContext, stream;
 let startTime = Date.now();
 let completedQuestions = [];
 
-const unit = "11-1-1 句子跟讀挑戰";
+const unit = "11-3-1 句子跟讀挑戰";
 
 const questionText = document.getElementById("question-text");
 const keywordsDiv = document.getElementById("keywords");
